@@ -1,0 +1,20 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  .tabLink {
+    padding: 13px 20px;
+    background: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.15s;
+
+    &.active {
+      color: #fff;
+      background: rgb(233, 144, 41);
+    }
+  }
+}

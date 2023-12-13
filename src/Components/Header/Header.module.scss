@@ -1,0 +1,51 @@
+.header {
+  padding: 20px 0;
+  background: #fff;
+  box-shadow: rgba(75, 70, 92, 0.1) 0px 4px 18px 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 5;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 32px;
+
+    span {
+      color: rgb(233, 144, 41);
+    }
+  }
+
+  .cart {
+    opacity: 0.6;
+    position: relative;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .cartLength {
+    position: absolute;
+    z-index: 5;
+    right: -15px;
+    top: -15px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(233, 144, 41);
+    color: #fff;
+    border-radius: 100%;
+    font-size: 10px;
+    font-weight: 300;
+  }
+}

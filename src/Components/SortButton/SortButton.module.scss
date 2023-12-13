@@ -1,0 +1,87 @@
+.sort {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @media screen and (max-width: 700px) {
+    width: fit-content;
+  }
+
+  .title {
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .sortBtn {
+    padding: 13px 20px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: 0.15s;
+    width: 130px;
+    font-weight: 400;
+    font-size: 14px;
+
+    svg {
+      margin-left: 10px;
+      transition: 0.15s;
+    }
+
+    &:hover,
+    &.open {
+      border-color: rgb(233, 144, 41);
+    }
+
+    &.open {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .bgClose {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 40;
+  }
+
+  .content {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid rgb(233, 144, 41);
+    z-index: 50;
+    width: 130px;
+    overflow: hidden;
+
+    button {
+      padding: 10px 20px;
+      display: block;
+      background: #fff;
+      width: 100%;
+      border-bottom: 1px solid rgb(233, 144, 41);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: #f3f2f2;
+      }
+
+      &.active {
+        background: rgb(233, 144, 41);
+        color: #fff;
+      }
+    }
+  }
+}
